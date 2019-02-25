@@ -175,6 +175,21 @@ print("미국 환율은 {0}원이고 \n엔화 환율은 {1}원입니다.\n변동
 > 엔화 환율은 1,013.01원입니다. 
 > 변동폭은 각각  3.90원,  1.83원입니다.
 
+
+
+### 주의사항
+
+![1551075142923](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1551075142923.png)
+
 - iframe 태그는 웹 페이지 두 개(html태그)를 동시에 보여주고 싶을 때 사용하는데, iframe을 이용하고 있는 태그는 이러한 방식으로는 즉각적으로 가져올 수 없다.
+
 - R Selenium은 페이지 로딩이 끝날 때까지 기다리기 때문에 이러한 것도 반영하여 가져올 수 있지만,  request같은 경우 최초 요청 시를 기준으로 하기 때문에 이러한 문제가 생기는 것,
-- 
+
+  - 페이지 리로딩이 발생하는 경우
+  - 새로고침 없이 계속해서 데이터가 갱신되는 경우
+
+  
+
+![1551075371607](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1551075371607.png)
+
+> 출처 : https://www.slideshare.net/wangwonLee/2018-datayanolja-moreeffectivewebcrawling
