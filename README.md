@@ -7,4 +7,33 @@
 
 ## 추가 내용
 
-- 수정 
+> 2019.02.23.
+
+- README.md
+- git/GIT 사용방법.md
+
+- python/function.md
+- python/data_type.md
+
+
+
+> 2019.02.24.
+
+- python/format_code.md
+- python/formating.md
+
+
+
+> 2019.02.25.
+
+- python/data_type.md
+- python/web_crawling.md
+- python/web_framework.md
+- assets
+  - 이미지 연동
+- what_is_CLI.md
+
+
+
+
+

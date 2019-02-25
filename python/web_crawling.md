@@ -75,7 +75,7 @@ print(kospi.text)
 
 
 
-![1551071339978](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1551071339978.png)
+![1551071339978](assets/1551071339978-1551080524245.png)
 
 - 우리가 필요로 하는 데이터를 담고 있는 태그를 검사한다.
 
@@ -100,9 +100,7 @@ print(searchrank.text)
 
 
 
-![1551072041563](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1551072041563.png)
-
-- 마찬가지로 해당하는 데이터들이 포함되어 있는 태그를 조사한다.
+![1551072041563](assets/1551072041563-1551080534691.png)마찬가지로 해당하는 데이터들이 포함되어 있는 태그를 조사한다.
 
 ```python
 import requests
@@ -179,7 +177,7 @@ print("미국 환율은 {0}원이고 \n엔화 환율은 {1}원입니다.\n변동
 
 ### 주의사항
 
-![1551075142923](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1551075142923.png)
+![1551075142923](assets/1551075142923.png)
 
 - iframe 태그는 웹 페이지 두 개(html태그)를 동시에 보여주고 싶을 때 사용하는데, iframe을 이용하고 있는 태그는 이러한 방식으로는 즉각적으로 가져올 수 없다.
 
@@ -190,6 +188,8 @@ print("미국 환율은 {0}원이고 \n엔화 환율은 {1}원입니다.\n변동
 
   
 
-![1551075371607](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1551075371607.png)
+![1551075371607](assets/1551075371607.png)
+
+
 
 > 출처 : https://www.slideshare.net/wangwonLee/2018-datayanolja-moreeffectivewebcrawling

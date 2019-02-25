@@ -42,7 +42,7 @@ code .
 - terminal의 플러스 버튼을 누른 뒤에 customize => git bash 설정
 - default shell 이 bash로 변경된다.
 
-![1551058110110](C:\Users\student\AppData\Roaming\Typora\typora-user-images\1551058110110.png)
+![1551058110110](assets/1551058110110.png)
 
 > 적용된 상태
 
