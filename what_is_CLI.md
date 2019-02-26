@@ -1,3 +1,5 @@
+[TOC]
+
 # CLI
 
 > : Command Line Interface (<-> GUI)

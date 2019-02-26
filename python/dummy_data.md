@@ -1,4 +1,12 @@
+
+
+[TOC]
+
 # 더미 데이터 만들기
+
+------
+
+
 
 ```bash
 $ pip install faker

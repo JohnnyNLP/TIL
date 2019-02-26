@@ -1,13 +1,8 @@
+[TOC]
+
 # 파이썬 함수
 
-## 목차
-
-1. print
-2. abs
-3. len
-4. range
-5. sorted
-6. str
+------
 
 
 
