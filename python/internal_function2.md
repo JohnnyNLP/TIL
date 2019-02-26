@@ -14,19 +14,116 @@
 greeting="Hi!!!"
 
 for i in range(10):
-for i in "abcdefghij":
-for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
-for i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9):
+# for i in "abcdefghij":
+# for i in [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]:
+# for i in (0, 1, 2, 3, 4, 5, 6, 7, 8, 9):
     print(greeting)
 ```
 
 - in 뒤에는 range, string, list, tuple 형태의 자료형(끝이 정해져 있는)이라면 뭐든 들어갈 수 있다.
+
 - for문에 범위를 정해준 뒤에는 꼭 :를 적고 줄바꿈한다.
+
 - 줄바꿈을 한 뒤에 실제로 적용할 함수 부분에는 `들여쓰기`를 해주어야 한다. (4space 권장)
+
+  
+###     구구단 예제
+
+```python
+for i in range(2, 10):
+    for j in range(1, 10):
+        print(i*j, end=" ")
+    print('')
+```
+
+> 2 4 6 8 10 12 14 16 18 
+> 3 6 9 12 15 18 21 24 27 
+> 4 8 12 16 20 24 28 32 36 
+> 5 10 15 20 25 30 35 40 45 
+> 6 12 18 24 30 36 42 48 54 
+> 7 14 21 28 35 42 49 56 63 
+> 8 16 24 32 40 48 56 64 72 
+> 9 18 27 36 45 54 63 72 81 
+
+
+
+###     리스트 안에 for 문 포함하기
+
+```python
+a = [1, 2, 3, 4]
+result = []
+for num in a:
+    result.append(num*3)
+print(result)
+```
+
+> [3, 6, 9, 12]
+
+- 위 코드를 다음과 같이 수행할 수 있다.
+
+```python
+result = [num*3 for num in a]
+print(result)
+```
+
+- [표현식 for 항목 in 반복 가능 객체 (if 조건)]
+
+
+
+###     리스트+for문을 이용해 구구단 표현하기
+
+- 리스트 형태로 결과를 리턴한다.
+
+```python
+result = [x*y for x in range(2,10)
+		      for y in range(1,10)]
+print(result)
+```
+
+> [2, 4, 6, 8, 10, 12, 14, 16, 18, 3, 6, 9, 12, 15, 18, 21, 24, 27, 4, 8, 12, 16, 20, 24, 28, 32, 36, 5, 10, 15, 20, 25, 30, 35, 40, 45, 6, 12, 18, 24, 30, 36, 42, 48, 54, 7, 14, 21, 28, 35, 42, 49, 56, 63, 8, 16, 24, 32, 40, 48, 56, 64, 72, 9, 18, 27, 36, 45, 54, 63, 72, 81]
+
+- 위 결과물을 슬라이싱 해보자.
+
+```python
+for i in ls :
+	print( "{0}단 : {1}" .format(i+2, result[9*i: 9*(i+1)]))
+```
+
+> 2단 : [2, 4, 6, 8, 10, 12, 14, 16, 18]
+> 3단 : [3, 6, 9, 12, 15, 18, 21, 24, 27]
+> 4단 : [4, 8, 12, 16, 20, 24, 28, 32, 36]
+> 5단 : [5, 10, 15, 20, 25, 30, 35, 40, 45]
+> 6단 : [6, 12, 18, 24, 30, 36, 42, 48, 54]
+> 7단 : [7, 14, 21, 28, 35, 42, 49, 56, 63]
+> 8단 : [8, 16, 24, 32, 40, 48, 56, 64, 72]
+> 9단 : [9, 18, 27, 36, 45, 54, 63, 72, 81]
+
+###     중간고사 점수 예제
+
+- Q. A 학급에 총 10명의 학생이 있다. 이 학생들의 중간고사 점수는 다음과 같다.
+
+```python
+[70, 60, 55, 75, 95, 90, 80, 80, 85, 100]  
+```
+
+- for문을 이용하여 A 학급의 평균 점수를 구해보아라.
+
+```python
+A = [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]  
+total = 0
+for grade in A:
+    total += grade
+average = total / len(A)
+print("A반의 평균 점수는 {0}점입니다." .format(average))
+```
+
+> A반의 평균 점수는 79.0점입니다.
 
 
 
 ## 2. if
+
+###     if문을 사용하여 미세먼지 등급 매기기
 
 ```python
 import requests
@@ -76,7 +173,7 @@ else :
 
 ## 3. open/close
 
-##### 		a. write() 함수
+### 		a. write() 함수
 
 ```python
 f = open("/c/Users/student/Desktop/newtext.txt", 'w')
@@ -96,7 +193,7 @@ f.close()
 
 
 
-##### 		b. readline() 함수
+### 		b. readline() 함수
 
 ```python
 f = open("/c/Users/student/Desktop/newtext.txt", 'r')
@@ -119,7 +216,7 @@ f.close()
 
   
 
-  ##### 	c. readlines() 함수
+### c. readlines() 함수
 
 ```python
 f = open("/c/Users/student/Desktop/newtext.txt", 'r')
@@ -133,7 +230,7 @@ f.close()
 
 
 
-##### 		d. read() 함수
+### 		d. read() 함수
 
 ```	python
 f = open("/c/Users/student/Desktop/newtext.txt", 'r')
@@ -146,7 +243,7 @@ f.close()
 
 
 
-##### 	e. 추가하기
+### 	e. 추가하기
 
 ```python
 f = open("/c/Users/student/Desktop/newtext.txt", 'a')
