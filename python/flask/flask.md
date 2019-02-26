@@ -396,4 +396,3 @@ def ego(name):
 - 가져온 직업을 query로 이용해서 giphy라는 gif 사이트에 검색한다.
 - 검색한 페이지(json 파일)에서 가져오고 싶은 이미지 url을 가져온다.
 - img src에 해당 url을 입력해준다.
-

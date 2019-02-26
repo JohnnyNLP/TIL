@@ -30,6 +30,7 @@
 ## 4. git remote
 
 - git remote add origin "해당 repository url" 명령어는 변경사항을 저장하고 싶은 원격 저장소를 설정하는 명령어이다.
+- new repository를 생성한 뒤에 아무것도 수행하지 않았다면  push가 아니라 remote add하여 저장소를 가져와야 한다.
 - 만약 한번 추가했다면 다시 수행하지 않아도 된다.
 
 
@@ -42,16 +43,53 @@
 
 
 
-## 6. Git의 역할
+## 6. git clone
+
+- 아직 repository와 연결이 되지 않았을 경우에는 pull이 아니라 clone을 통해 저장소를 가져와야 한다.
+- git clone '해당 url'의 형식으로 수행한다. (최초 1회 pull)
+- 만약 한번 clone 했다면 다시 수행하지 않아도 된다.
+
+
+
+## 7. git pull
+
+- 해당 github repository가 이미 있다면 변동 사항을 적용받기 위해 git pull 명령어를 수행한다.
+
+
+
+## 8. Git의 역할
 
 - 버전 관리
+
   - 바뀐 내용에 대한 기록을 log로 남길 수 있다.
   - 기존의 저장이 git의 commit에 해당.
   - 기능을 하나 변경했을 때마다 commit을 해준 뒤 log를 남긴다.
   - 변경 사항을 모아뒀다가 한번에 commit 하기보다는 그때그때 해주는 게 좋다.
+
 - 기본 프로세스
+
   - 작업 -> add
   - 커밋 목록 생성 -> commit 
   - 저장된 commit -> push 
   - github에 저장
+
+  
+
+## 9. 기타 명령어
+
+- git status
+  - 변경된 부분이 있는지 알려주는 명령어
+  - commit한 직후에는 아무 것도 보여주지 않는다.
+- git log 
+  - commit한 내역에 관해 알려주는 명령어
+  - git log --graph : branch 구분에 대한 구조도를 함께 보여준다.
+- git diff
+  - commit/add 이전에 파일의 변경사항을 보여줌
+
+
+
+## 10. 기타 참조 사이트
+
+- [지옥에서 온 git](https://opentutorials.org/course/2708)
+- [GIT(gui)](https://opentutorials.org/course/1492)
 
