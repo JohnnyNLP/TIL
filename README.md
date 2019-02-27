@@ -47,7 +47,7 @@
 
 
 
-### 2019.02.26
+### 2019.02.26.
 
 - python/data_type.md *modifed
 - python/internal_function.md *modified
@@ -58,3 +58,10 @@
 - python/flask/flask.md
 - python/flask/flask_intro/
 - 모든 파일에 목차 부여하기
+
+
+
+### 2019.02.27.
+
+- python/internal_function.md *modified
+- python/Class.md

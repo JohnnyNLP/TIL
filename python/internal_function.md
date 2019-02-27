@@ -80,6 +80,39 @@ print(numbers)
 - key와 reverse 인자를 추가할 수 있다.
 - 기본 셋팅은 오름차순, reveres=True를 부여하면 내림차순으로 정렬된다.
 - key=str.lower 이라는 인자값을 부여하면 소문자가 우선하여 정렬된다.
+- return 값은 리스트 형식이다.
+
+```python
+sorted([3, 1, 2])
+sorted(['a', 'c', 'b'])
+sorted ('zero')
+sorted ((3, 1, 2))
+```
+
+> [1, 2, 3]
+>
+> ['a', 'b', 'c']
+>
+> ['e', 'o', 'r', 'z']
+>
+> [1, 2, 3]
+
+
+
+### list객체의 sort 함수
+
+- list객체가 내장하고 있는 sort 함수의 경우 return값이 없으므로 변수에 담아도 그 결과는 None이 되지만, 대상 list 자체를 정렬시키는 효과를 가지고 있다.
+
+```python
+a = [3, 1, 2]
+result = a.sort()
+print(result)
+a
+```
+
+> None
+>
+> [1, 2, 3]
 
 
 
@@ -205,4 +238,160 @@ fib(6)
 ```
 
 > 8 # 0부터 0, 1, 1, 2, 3, 5, 8
+
+
+
+## 8. input
+
+- input은  java의  scanner 객체와 하는 일이 동일하다.
+
+```python
+b =  input("Enter : ")
+b
+```
+
+> Enter  : #입력
+
+
+
+## 9. lambda
+
+-  lambda는 def와 동일하지만 짧은 함수를 정의할 때 쓰인다.
+
+> lambda 인수 1, 인수 2,  ... : 인수를 이용한 표현식
+
+```python
+def sum (a,  b) :
+
+	return a + b
+```
+
+- 위 식은 다음과 같이 표현할 수 있다.
+
+```python
+sum = lambda a, b : a + b
+```
+
+- 또한 def를 사용할 수 없는 경우에도 함수를 정의할 수 있다는 장점이 있다.
+
+```python
+myList = [lambda a, b : a + b, lambda a, b : a * b]
+myList[0](3,4)
+myList[1](3,4)
+```
+
+> 7
+>
+> 12
+
+
+
+## 10.  map
+
+```python
+def plus_one(x):
+    return x+1
+
+print(list(map(plus_one, [1, 2, 3, 4, 5])))
+
+# 위 식은 다음과 같다.
+print(list(map(lambda a: a+1, [1, 2, 3, 4, 5 ])))
+
+# 맵 객체는 list로 변환해주어야 볼 수 있다.
+a = map(plus_one, [1, 2, 3, 4, 5])
+print(a)
+```
+
+> [2, 3, 4, 5, 6]
+> [2, 3, 4, 5, 6]
+>
+> \<map object at 0x00795350>
+
+
+
+## 11. pow
+
+- pow(x, y)는 x를 y제곱한 값을 리턴한다.
+
+```python
+pow(2, 4)
+```
+
+> 16
+
+
+
+## 12. range
+
+- range는 총 1, 2, 3개의 인수를 받을  수 있다.
+- range도 map과 마찬가지로 list로 변환해주어야 내용을 확인할 수 있다.
+
+### 인수가 하나인 경우
+
+```python
+list(range(5))
+```
+
+> [0, 1, 2, 3, 4]
+
+- 0부터 시작하여 1씩 증가하는 5개의 값을 return한다.
+
+
+
+### 인수가 두개인 경우
+
+```python
+list(range(5, 10))
+```
+
+> [5, 6, 7, 8, 9]
+
+- 5부터 시작하여 1씩 증가하는 10 미만의 값을 return한다.
+- 이때 마지막 값은 포함되지 않는다.
+
+
+
+### 인수가 세개인 경우
+
+```python
+list(range(1, 10, 2))
+```
+
+> [1, 3, 5, 7, 9]
+
+- 1부터 시작하여 2씩 증가하는 10 미만의 값을 return한다.
+
+
+
+## 13. type
+
+- type(object)는 object의 자료형을 return한다.
+
+```python
+type("abc")
+type([])
+type(open("test", 'w'))
+```
+
+> <class 'str'>
+>
+> <class 'list'>
+>
+> <class '_io.TextIOWrapper'>
+
+
+
+## 14. zip
+
+- zip(iterable)은 동일한 개수로 이루어진 자료형을 묶어주는 함수이다.
+- 즉, 리스트들을 인수로 받는다면 같은 인덱스의 값들끼리 묶어준다는 뜻이다.
+
+```python
+list(zip([1, 2, 3], [4, 5, 6], [7, 8, 9]))
+list(zip("abc", "def"))
+```
+
+> [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
+>
+> [('a', 'd'), ('b', 'e'), ('c', 'f')]
 
