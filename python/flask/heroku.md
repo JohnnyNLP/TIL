@@ -14,10 +14,10 @@ app.run(debug=True, host=os.getenv("IP", "0.0.0.0"), port=int(os.getenv("PORT", 
 - bash를 통해 파일을 하나 생성한다.
 
 ```bash
-$ touch Profile # 꼭 첫글자를 대문자로 생성한다.
+$ touch Procfile # 꼭 첫글자를 대문자로 생성한다.
 ```
 
-- Profile 파일로 들어와 다음을 추가한다.
+- Procfile 파일로 들어와 다음을 추가한다.
 
 > web: python app.py
 
