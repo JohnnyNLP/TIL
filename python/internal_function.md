@@ -389,9 +389,25 @@ type(open("test", 'w'))
 ```python
 list(zip([1, 2, 3], [4, 5, 6], [7, 8, 9]))
 list(zip("abc", "def"))
+list(zip([1, 2, 3], "abc"))
 ```
 
 > [(1, 4, 7), (2, 5, 8), (3, 6, 9)]
 >
 > [('a', 'd'), ('b', 'e'), ('c', 'f')]
+>
+> [(1, 'a'), (2, 'b'), (3, 'c')]
+
+
+
+## 15. dir
+
+- dir(object)는 해당 객체가 어떤 변수와 메소드를 가지고 있는지 return해준다.
+
+```python
+a = "hello"
+dir(a)
+```
+
+> ['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__gt__', ... 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
 
