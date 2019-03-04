@@ -75,3 +75,19 @@
 - python/flask/telegram.md
 - python/flask/telegram/app.py
 - python/flask/telegram/message.py
+
+
+
+### 2019.03.03.
+
+- python/formating.md *modified
+
+
+
+### 2019.03.04.
+
+- python/attend/attend.py
+- python/attend/attend.md
+- python/attend/attend1.txt
+- python/attend/attend2.txt
+- python/attend/attend3.txt
