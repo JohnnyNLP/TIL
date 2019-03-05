@@ -188,3 +188,66 @@ elif text == "출결":
 
 > ![1551691535276](assets/1551691535276.png)
 
+
+
+## ver.2 - 코드 간결화하기
+
+- 내가 작성한 코드는 현재 수강하는 수업의 종류가 많지 않기 때문에 직접 작성해도 크게 문제가 없었다.
+- 그러나 19학점을 꽉 채워 듣는 한주 형의 시간표에도 위 내용을 적용하고 싶다면 어떡해야 할까?
+- 7개나 되는 수업명을 일일이 적고 매번 반복해서 쓰는 일을 피하기 위해서 코드 간결화를 수행하기로 했다.
+- 내가 선택한 방법은 dictionary를 이용하는 것이었다. (공교롭게도 dict project를 시도한 직후에 이 아이디어가 떠올랐다.)
+
+- 처음으로 시도한 방법은 다음과 같다.
+
+```python 
+classes = {"수업1":{"name":"한국어정보처리", "file":"attend1.txt"},
+            "수업2":{"name":"교양독일어중급","file":"attend2.txt"},                       
+            "수업3":{"name":"소설창작연습","file":"attend3.txt"}
+}
+print(classes.get("수업1").get("name"))
+```
+
+> 한국어정보처리
+
+- 위 방식의 경우, 수업명을 얻기 위해서 두 번이나 타고 올라가야하는 단점이 있는데, 이는 본래의 취지에 맞지 않고, 직관적이지도 않았다.
+- 애초에 딕셔너리를 사용하는 목적이 key와 value를 묶어서 보관하는 데 있다고 생각하여, 수업1, 수업2와 같은 구분이 무의미하다고 판단을 내렸다.
+
+```python
+classess = {"name":["한국어정보처리", "교양독일어중급", "소설창작연습"],
+            "file":["attend1.txt", "attend2.txt", "attend3.txt"]}
+print(classess.get("name")[0])
+```
+
+> 한국어정보처리
+
+- 두 번째로 시행한 코드는 다음과 같았다.
+- 이 방식의 경우 각 value값들을 리스트로 묶어 인덱스를 통해 호출할 수 있도록 하였다.
+- 만약 다른 누군가가 위 코드를 수정해 자신의 시간표에 적용하고 싶다면 과목명만 리스트에 추가하면 된다.
+- 인덱스를 통한 호출 방식은 for문을 이용한 반복 출력에도 사용할 수 있기 때문에 생산적이다.
+
+```python
+if prompt == '1':
+    for r in range(3) :
+        with open(classes.get("file")[r], 'r', encoding="utf-8") as f :
+            lines = f.readlines()
+            print(f"{classes.get('name')[r]} 수업은 총 {len(lines)}회 결석하셨습니다. 남은 결석 횟수는 {10-len(lines)}회입니다.")    
+    # with open(classes.get("수업1").get("file"), 'r', encoding="utf-8") as f :
+    #     lines = f.readlines()
+    #     print(f"한국어정보처리 수업은 총 {len(lines)}회 결석하셨습니다. 남은 결석 횟수는 {10-len(lines)}회입니다.")
+    # with open('attend2.txt', 'r', encoding="utf-8") as f :
+    #     lines = f.readlines()
+    #     print(f"교양독일어중급 수업은 총 {len(lines)}회 결석하셨습니다. 남은 결석 횟수는 {10-len(lines)}회입니다.")
+    # with open('attend3.txt', 'r', encoding="utf-8") as f :
+    #     lines = f.readlines()
+    #     print(f"소설창작연습 수업은 총 {len(lines)}회 결석하셨습니다. 남은 결석 횟수는 {10-len(lines)}회입니다.")
+```
+
+- 이처럼 classes 딕셔너리 객체를 이용하자 for문을 사용하여 반복을 피할 수 있었고, 거의 1/3로 코드를 줄일 수 있었다.
+
+## 희망사항
+
+- 위 챗봇을 heroku로 배포하려고 했을 떄 txt 파일이 함께 push되지 않는 것을 발견했다.
+- 이는 heroku가 호출 시마다 동적으로 파일을 수정하는 방식을 지원해주지 않기 때문이었다.
+- 만약 heroku에서 사용할 수 있는 DB를 이용한다면 출결 기록도 DB를 이용해 반영할 수 있을 것이다.
+- heroku 이용 방식에 대해서는 추후에 더 탐구해보도록 하자.
+

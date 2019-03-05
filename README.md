@@ -91,3 +91,13 @@
 - python/attend/attend1.txt
 - python/attend/attend2.txt
 - python/attend/attend3.txt
+
+
+
+### 2019.03.05
+
+- python/attend/attend.py *modified
+- python/attend/attend.md *modified
+- python/attend/test.py
+- python/dict/dict.py
+- python/dict/dict.md
