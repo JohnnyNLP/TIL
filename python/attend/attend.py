@@ -19,7 +19,10 @@ if prompt == '1':
     for r in range(3) :
         with open(classes.get("file")[r], 'r', encoding="utf-8") as f :
             lines = f.readlines()
-            print(f"{classes.get('name')[r]} 수업은 총 {len(lines)}회 결석하셨습니다. 남은 결석 횟수는 {10-len(lines)}회입니다.")    
+            if r == 1 :
+                print(f"{classes.get('name')[r]} 수업은 총 {len(lines)}회 결석하셨습니다. 남은 결석 횟수는 {20-len(lines)}회입니다.")    
+            else :
+                print(f"{classes.get('name')[r]} 수업은 총 {len(lines)}회 결석하셨습니다. 남은 결석 횟수는 {10-len(lines)}회입니다.")    
     # with open(classes.get("수업1").get("file"), 'r', encoding="utf-8") as f :
     #     lines = f.readlines()
     #     print(f"한국어정보처리 수업은 총 {len(lines)}회 결석하셨습니다. 남은 결석 횟수는 {10-len(lines)}회입니다.")
@@ -36,17 +39,24 @@ elif prompt == '2':
     3. {classes.get("name")[2]}
     결석한 과목 번호를 입력하세요 : """)
   
-    if absence == '1' :
-        with open(classes.get("file")[0], 'a', encoding="utf-8") as f :
-            f.write(f"{classes.get('name')[0]} 수업에 {dt.month}월 {dt.day}일 결석했습니다.\n")
-    elif absence == '2' :
-        with open(classes.get("file")[1], 'a', encoding="utf-8") as f :
-            f.write(f"{classes.get('name')[1]} 수업에 {dt.month}월 {dt.day}일 결석했습니다.\n")
-    elif absence == '3' :
-        with open(classes.get("file")[2], 'a', encoding="utf-8") as f :
-            f.write(f"{classes.get('name')[2]} 수업에 {dt.month}월 {dt.day}일 결석했습니다.\n")
-    else :
+    for i in [1, 2, 3] :
+        if absence == str(i) :
+            with open(classes.get("file")[i-1], 'a', encoding="utf-8") as f :
+                f.write(f"{classes.get('name')[i-1]} 수업에 {dt.month}월 {dt.day}일 결석했습니다. \n")
+                print("성공적으로 기록하였습니다.")
+    if absence not in ['1', '2', '3'] :
         print("과목 번호를 잘못 입력하셨습니다.")
+    # if absence == '1' :
+    #     with open(classes.get("file")[0], 'a', encoding="utf-8") as f :
+    #         f.write(f"{classes.get('name')[0]} 수업에 {dt.month}월 {dt.day}일 결석했습니다.\n")
+    # elif absence == '2' :
+    #     with open(classes.get("file")[1], 'a', encoding="utf-8") as f :
+    #         f.write(f"{classes.get('name')[1]} 수업에 {dt.month}월 {dt.day}일 결석했습니다.\n")
+    # elif absence == '3' :
+    #     with open(classes.get("file")[2], 'a', encoding="utf-8") as f :
+    #         f.write(f"{classes.get('name')[2]} 수업에 {dt.month}월 {dt.day}일 결석했습니다.\n")
+    # else :
+    #     print("과목 번호를 잘못 입력하셨습니다.")
 elif prompt == '3':
     list = list(classes.get("file"))
     # list = ('attend1.txt', 'attend2.txt', 'attend3.txt')

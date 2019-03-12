@@ -94,10 +94,16 @@
 
 
 
-### 2019.03.05
+### 2019.03.05.
 
 - python/attend/attend.py *modified
 - python/attend/attend.md *modified
 - python/attend/test.py
 - python/dict/dict.py
 - python/dict/dict.md
+
+
+
+### 2019.03.12.
+
+- python/attend/attend.py *modified
