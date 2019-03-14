@@ -107,3 +107,10 @@
 ### 2019.03.12.
 
 - python/attend/attend.py *modified
+
+
+
+### 2019.03.14.
+
+- web/
+- web/web_intro.md
