@@ -36,3 +36,8 @@ for (num in 1:100) {
 setwd("C:\Users\박찬희\Desktop\Git\TIL\R")
 page <- cbind(rank, title, singer2)
 write.csv(page, "top_100.csv")
+
+# 2. 가사 긁어오기
+search <- gsub(" ", "+", title)
+a <- "검색"
+url <- paste0("https://www.melon.com/search/lyric/index.htm?q=",a,"&section=&searchGnbYn=Y&kkoSpl=Y&kkoDpType=&linkOrText=T&ipath=srch_form")
