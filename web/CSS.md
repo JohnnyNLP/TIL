@@ -181,6 +181,57 @@ padding : 10 0 5px;
 
 
 
+## 배치 방식
+
+- 엘리먼트를 배치하는 작업을 layout 작업, rendering 과정이라고도 한다.
+
+
+
+### display
+
+- block : 무조건 한 줄을 사용한다. 벽돌을 쌓듯이 위에서 아래로 쌓인다.
+- inline : 기본적으로 span 태그와 같다. 텍스트가 왼쪽에서 오른쪽으로 흐르지만, 높이와 넓이는 반영할 수 없다. 텍스트 내 특정 부분에만 스타일을 줄 때 사용할 수 있다.
+- inline-block : 인라인의 단점을 보완한 기능으로, width/height, margin/padding, line-height가 지정 가능하다.
+
+
+
+### position 
+
+- static : 기본 속성. 순서대로 배치된다.
+- absolute : top/left/right/bottom으로 설정한다. 기준점은 상위 엘리먼트 중 static 아닌 position을 따른다. (top/left 값은 0이라도 적어주는 것이 좋다) 만약 해당 상위 엘리먼트가 없으면 body를 기준으로 삼는다.
+- relative : top/left/right/bottome으로 설정한다. 원래 자신이 위치해야할 곳을 기준으로 이동한다.
+- fixed : viewport(전체화면). 좌측,맨위를 기준으로 동작한다.
+
+** margin : 주변 엘리먼트와 본인 사이의 간격 (margin-top/left/right/bottom)
+
+
+
+### float
+
+- left
+- right
+
+주위 엘리먼트들의 flow를 따르지 않고 예외적 위치에 배치된다. -> 페이지의 좌우 배치에 활용된다.
+
+
+
+## css 박스 모델
+
+> ![css box modelì ëí ì´ë¯¸ì§ ê²ìê²°ê³¼](assets/box-model.gif)
+
+- margin : 엘리먼트 간의 간격
+- border : 컨텐츠 경계를 이루는 테두리
+- padding : 컨텐츠와 보더 사이의 경계
+
+
+
+## 엘리먼트의 크기
+
+- block 엘리먼트는 기본적으로 부모의 크기만큼을 가진다.
+- padding 속성을 늘리면 엘리먼트의 크기 자체가 달라질 수 있다. 이를 방지하기 위해서는 box-sizing을  content-box(기본값)이 아닌 border-box(테두리)으로 변경하면 된다. 그러면 박스의 크기가 비교적 잘 유지된다.
+
+
+
 ## 참조 링크
 
 > - css 치트 시트
