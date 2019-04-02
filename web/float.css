@@ -1,0 +1,51 @@
+li {
+    list-style:none;
+}
+  
+header{
+    background-color:#444;
+}
+ 
+#wrap{
+    overflow:auto;
+    margin:20px 0px;
+}
+
+footer{
+    background-color:#222;
+    clear:both; 
+}
+
+.left, .mid, .right{
+    float:left;
+    height:200px;
+}
+
+.left {
+    width:17%;
+    margin-right:3%;
+    background-color:#c7c;
+}
+
+.mid{
+    width:60%;
+    text-align:center;
+    background-color:#daf;
+}
+  
+.mid > h2{
+    position:relative;
+}
+
+.mid .emoticon{
+    position:absolute;
+    top:0px;
+    right:25%;
+    color:#fff;
+}
+
+.right{
+    width:17%;
+    margin-left:3%;
+    background-color:#c7c;
+}

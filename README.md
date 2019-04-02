@@ -143,3 +143,23 @@
 - web/css.md *modified
 - web/index.html *modified
 - web/main.css
+
+
+
+### 2019.03.23.
+
+- R/Lyric_analysis
+- R/Lyric_analysis/Bumjun.txt
+- R/Lyric_analysis/Bumjun.job
+- R/Lyric_analysis/Bumjun.R
+- R/Lyric_analysis/report.pdf
+
+
+
+### 2019.04.02.
+
+- web/css.md *modified
+- web/index.html -> element.html
+- web/main.css -> element.css
+- web/float.html
+- web/float.css
