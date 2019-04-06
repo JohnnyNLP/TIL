@@ -164,3 +164,15 @@
 - web/float.html
 - web/float.css
 - web/debugging.md
+
+
+
+### 2019.04.06.
+
+- web/files
+- web/element.html -> web/files/element.html *moved
+- web/element.css -> web/files/element.css *moved
+- web/float.html -> web/files/float.html *moved
+- web/float.css -> web/files/float.css *moved
+- web/files/helloservlet.java
+- web/errors.md
