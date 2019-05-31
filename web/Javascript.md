@@ -119,3 +119,72 @@ B(); // 1
 - 이는 위에서 설명한 변수의 생성 과정과 유사한 맥락에서 이해될 수 있다.
 - 즉, 미리 변수를 설정하지 않고 선언하더라도 크게 문제가 없다.
 - toString.call()이나 typeof()를 통해 명시적으로 확인하는 방법도 있다.
+
+
+
+## 함수
+
+- 함수는 여러 개의 인수를 받아서 그 결과를 출력한다.
+- 파라미터의 개수와 인수의 개수가 일치하지 않아도 오류가 나지 않는다.
+- 이럴 경우 파라미터는 undefined라는 값을 자동으로 가지게 된다.
+- 파라미터가 더 많을 경우 자동으로 무시된다.
+- 즉, 기본적으로 오류가 잘 나지 않는다.
+
+
+
+```javascript
+function printName(firstname) {
+    return "my name is " + firstname;
+}
+
+console.log(printName());
+```
+
+> my name is undefined
+
+
+
+### 함수 표현식
+
+```javascript
+function printName(firstname) {
+    
+    var result = inner();
+        console.log("my name is " + result);
+    
+  	function inner() {
+        return "inner value";
+    }
+}
+
+printName();
+```
+
+> my  name is inner value
+
+- 함수 선언부가 아래에 나와있다고 하더라도 같은 중괄호 내에서 함수로 인식되고 있다 -> 위에서 다룬 호이스팅 개념
+- 즉, 함수가 실행되기 전에 함수 전체의 내용을 훑어서 확인하는 절차가 진행되는 것
+
+
+
+### 함수의 리턴값
+
+- js는 아무 것도 eturn하지 않아도 기본적으로 undefined를 반환한다.
+- 즉, 자바에서의 void 같은 함수는 없다.
+
+
+
+### arrow function
+
+- ES2015에 추가된 기능이라고 한다.
+
+```javascript
+function getName(name) {
+   return "Kim " + name ;
+}
+
+//위 함수는 아래 arrow함수와 같다.
+var getName = (name) => "Kim " + name;
+```
+
+- 점점 많이 사용되고 있는 추세라고 한다.
