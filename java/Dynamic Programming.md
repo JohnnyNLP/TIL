@@ -54,6 +54,33 @@
 
 
 
+## 동적계획법 예제
+
+![1556585720537](assets/1556585720537.png)
+
+
+
+### 접근 방법
+
+- (i, j)에 접근하기 위해서는 (i, j-1) 혹은 (i-1, j)까지 가야 한다.
+- 이때 (i, j-1) 혹은 (i-1, j)에 이르는 과정도 최선의 방법이어야 한다.
+
+![1556585921458](assets/1556585921458.png)
+
+
+
+### 코드
+
+```java
+int mat (int i, int j)
+```
+
+
+
+
+
 ## 참조
 
 <https://www.youtube.com/watch?v=K15qLnKKrow>
+
+<https://www.youtube.com/watch?v=j_sdjivoPs8>
