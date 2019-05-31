@@ -188,3 +188,40 @@ var getName = (name) => "Kim " + name;
 ```
 
 - 점점 많이 사용되고 있는 추세라고 한다.
+
+
+
+### 함수의 호출
+
+- 함수는 연속적으로 호출하거나 자기 자신을 호출할 수 있다.
+
+```javascript
+// 함수의 호출.
+function printName(lastname) {
+    var myname = "Chanhee";
+    return myname + " ," +  lastname;
+}
+
+function run(lastname) {
+   firstname = firstname || "Youn";
+   var result = printName(lastname);
+   console.log(result);
+}
+
+run('Park');
+```
+
+> Chanhee ,Park
+
+- 위 함수는 run이 실행된 상태에서 printName이 호출된다.
+
+- 이러한 함수 실행 방식을 call stack이라고 한다.
+
+- 즉, 가장 마지막에 호출된 함수가 가장 먼저 실행되고 스택에서 사라진다.
+
+- 그러나 호출이 지나치게 쌓이다보면 오류가 발생할 수 있다.
+
+  'Maximum call stack size exceeded'
+
+
+
